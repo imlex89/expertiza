@@ -1,0 +1,190 @@
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 0 0 auto;
+  position: relative;
+  animation-duration: 3s;
+  animation-name: person;
+  img {
+    visibility: hidden;
+  }
+}
+@keyframes person {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+.main {
+	display: flex;
+	flex: 1 1 auto;
+	position: relative;
+	background-color: #1f090e;
+	color: #bf9037;
+	height: 782px;
+	h1 {
+		color: #bf9037;
+		font-family: "PT Sans - Caption Bold";
+		font-size: 5rem;
+		font-weight: 400;
+		line-height: 100px;
+		text-transform: uppercase;
+		letter-spacing: 2.25px;
+		p {
+			&:first-child, &:last-child {
+				color: #ffffff;
+				font-size: 1.65rem;
+				line-height: 40px;			
+			}
+		}
+	}
+	ul {
+		border-left: 1px solid;
+    	border-bottom: 1px solid;
+    	width: 30rem;
+    	padding-bottom: 95px;
+		li {
+			font-size: 1.65rem;
+			font-weight: 400;
+			line-height: 40px;
+			margin-top: 25px;
+			margin-left: -0.5rem;
+			&:before {
+				content: url('/img/ofer/Ellipse_1.svg');
+				margin-right: 15px;
+			}
+		}
+	}
+	&__body {
+		@include jcw($j, flex-start, nowrap);
+	}
+	&__bl {
+		margin-top: 60px;
+		flex: 1 1 auto;
+	}
+	&__order {
+		background: #bf9037;
+		color: #000000;
+		font-size: 1.5rem;
+		font-weight: 400;
+		padding: 27px 72px;
+		border-radius: 50px;
+		text-transform: uppercase;
+		margin: -2.6rem 0 0 7rem;
+    	position: absolute;
+    	&:hover {
+    		background: #fff;
+    		color: #333;
+    		-webkit-transition: 0.25s ease-out 0.25s;
+		    -moz-transition: 0.25s ease-out 0.25s;
+		    -o-transition: 0.25s ease-out 0.25s;
+		    transition: 0.25s ease-out 0.25s;
+    	}
+	}
+	&__br {
+		position: absolute;
+	    font-size: 16px;
+	    font-weight: 400;
+	    line-height: 25px;
+	    right: -4rem;
+    	top: 7rem;
+		h4 {
+			color: #ffffff;
+			font-weight: 400;
+			border-bottom: 1px solid #bf9037;
+		}
+		p {
+			color: #bf9037;
+		}
+	}
+}
+@media (min-width: 1300px) {
+	.main__br {
+	    right: -4rem;
+	}
+	.ibg {
+		margin-right: 1rem;
+	}
+}
+@media (max-width: 1280px) {
+	.main__br {
+	    right: -1rem;
+	}
+}
+@media (max-width: 1024px) {
+	.main__bl {
+	    position: relative;
+	}
+	.main h1 {
+	    font-size: 3rem;
+	}
+	.ibg {
+	    margin-left: -15rem;
+	    position: inherit !important;
+	}
+	.main__br {
+	    right: 0.5rem;
+	}
+}
+@media (max-width: 770px) {
+	.main {
+		height: auto;
+	}
+	.main__bl {
+	    margin-top: 0;
+	    order: 2;
+	}
+	.main__body {
+		@include jcw($j, $c, $w);
+	}
+	.ibg {
+		background-size: contain !important;
+	    order: 1;
+	     img {
+		    width: 50%;
+		}
+	}
+	.main__br {
+	    right: 5rem;
+	}
+}
+@media (max-width: 500px) {
+	.ibg {
+	    margin-left: -11rem;
+	}
+	.main__br {
+		top: 3rem;
+	    right: 1rem;
+	}
+	.main__order {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 320px) {
+	.main h1 {
+	    font-size: 2rem;
+	    margin-left: 6rem;
+	    p:first-child, p:last-child {
+		    font-size: 0.65rem;
+		}
+	}
+	.ibg {
+	    margin: 7rem auto 0;
+	}
+	.main__br {
+	    top: 1rem;
+	    right: 1rem;
+	}
+	.main ul li {
+	    font-size: 1rem;
+	    margin-left: 6rem;
+	}
+	.main__order {
+	    font-size: 0.95rem;
+	    margin: -5.6rem 0 0 5rem;
+	}
+}
