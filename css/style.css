@@ -287,6 +287,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid;
   width: 30rem;
   padding-bottom: 95px;
+  margin-top: -3rem;
 }
 .main ul li {
   font-size: 1.65rem;
