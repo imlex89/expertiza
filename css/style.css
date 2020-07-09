@@ -273,7 +273,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 2.25px;
 }
-.main h1 p:first-child, .main h1 p:last-child {
+.main h1 span:first-child, .main h1 span:last-child {
   color: #ffffff;
   font-size: 1.65rem;
   line-height: 40px;
